@@ -12,8 +12,6 @@ def home(request):
         except Exception as e:
             api = "Error..."
         return render(request, 'home.html', {'api':api})
-        
-
 
     else:
         return render(request, 'home.html', {'ticker': "Enter a Ticker Symbol Above..."})
@@ -24,3 +22,7 @@ def home(request):
 
 def about(request):
     return render(request, 'about.html', {})
+
+
+def add_stock(request):
+    return render(request, 'add_stock.html', {})
