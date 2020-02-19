@@ -12,6 +12,46 @@
      <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Add Stock</button>
     </form><br/>
 
+
+    <table class="table table-striped table-hover table-bordered">
+        <thead class="table-primary"
+          <tr>
+            <th scope="col">Company Name</th>
+            <th scope="col">Stock Price</th>
+            <th scope="col">Previous Close</th>
+            <th scope="col">Market Cap</th>
+            <th scope="col">YTD Change</th>
+            <th scope="col">52wk High</th>
+            <th scope="col">52wk Low</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          {% for item in ticker %}
+            <tr>
+              <th scope="row">{{ item }}</th>
+              <td><a href="{% url 'delete' item.id %}">Delete Stock</a></td>
+              <td>Otto</td>
+              <td>@mdo</td>
+              <td>Mark</td>
+              <td>Mark</td>
+              <td>Mark</td>  
+            </tr>
+          {% endfor %}
+
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td>Mark</td>
+            <td>Mark</td>
+            <td>Mark</td>
+            
+          </tr>
+        </tbody>
+      </table>
+
   
 
     {% for item in ticker %}
